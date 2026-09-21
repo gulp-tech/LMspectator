@@ -1,17 +1,20 @@
 name: ModChecker
-version: 1.0.0
+version: '${project.version}'
 main: ru.musd348.modchecker.ModChecker
-api-version: '1.20'
+api-version: '1.21'
 author: musd348
-description: Plugin for checking client mods, version and type
+description: Проверка клиента, версии игры и списка модов у игроков
+website: https://github.com/gulp-tech/LMspectator
 
 commands:
   checkmods:
-    description: Check player mods, client and version
-    usage: /checkmods [player]
+    description: Показать клиент, версию игры и список модов игрока
+    usage: /checkmods <ник_игрока>
+    aliases: [checkmod, mods, cm]
     permission: modchecker.use
+    permission-message: <red>У вас нет прав для использования этой команды.</red>
 
 permissions:
   modchecker.use:
-    description: Allows using /checkmods command
+    description: Доступ к команде /checkmods
     default: op

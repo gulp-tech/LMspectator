@@ -1,8 +1,22 @@
-```
-# Dependencies
+# Maven: артефакты сборки
 target/
-.mvn/
-# Compiled and build artifacts
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle (если проект когда-нибудь мигрирует)
+.gradle/
+build/
+dist/
+out/
+
+# Скомпилированные классы и архивы
 *.class
 *.jar
 *.war
@@ -14,43 +28,51 @@ target/
 *.a
 *.lib
 *.exe
-# Logs and temp files
+
+# Логи и временные файлы
 *.log
 *.tmp
 *.swp
 *.swo
-# Environment
+
+# Переменные окружения
 .env
 .env.local
 *.env.*
-# Editors
+
+# Редакторы и IDE
 .vscode/
 .idea/
 *.iml
 *.ipr
 *.iws
-# Python specific (if present)
+
+# Python (используется только офлайн-валидаторами в tools/)
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .venv/
 venv/
-# Node.js specific (if present)
+
+# Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-# Java specific build tools
-.gradle/
-build/
-dist/
-out/
-# Coverage reports
+
+# Отчёты покрытия
 coverage/
 htmlcov/
 .coverage
-# OS generated files
+
+# ОС
 .DS_Store
 Thumbs.db
-```
+
+# Локальные тулчейны и кэши (не часть плагина)
+tools/__pycache__/
+.venv-check/
+.m2/
+mvnw
+mvnw.cmd
